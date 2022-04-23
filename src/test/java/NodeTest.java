@@ -1,3 +1,4 @@
+import com.puzzlesolver.Node;
 import org.assertj.core.api.Assertions;
 import org.assertj.core.api.BDDAssertions;
 import org.junit.jupiter.api.Test;

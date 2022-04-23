@@ -1,3 +1,5 @@
+package com.puzzlesolver;
+
 import java.util.HashSet;
 import java.util.Objects;
 

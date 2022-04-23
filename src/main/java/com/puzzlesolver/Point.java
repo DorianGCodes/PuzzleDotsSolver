@@ -1,3 +1,5 @@
+package com.puzzlesolver;
+
 import java.util.Objects;
 
 class Point {

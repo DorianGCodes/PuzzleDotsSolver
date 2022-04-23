@@ -1,3 +1,5 @@
+package com.puzzlesolver;
+
 import java.util.*;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.Executors;

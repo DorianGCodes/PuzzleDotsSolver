@@ -1,3 +1,6 @@
+import com.puzzlesolver.BoardNodeFactory;
+import com.puzzlesolver.NodeConnectionsGenerator;
+import com.puzzlesolver.Point;
 import org.assertj.core.api.BDDAssertions;
 import org.junit.jupiter.api.Test;
 
