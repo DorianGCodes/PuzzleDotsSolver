@@ -9,3 +9,5 @@ If a square does not contain any number, then an arbitrary number of its sides m
 # Requirements
 - gradle 7.0
 - java 15
+## Run app
+``./gradlew run``
