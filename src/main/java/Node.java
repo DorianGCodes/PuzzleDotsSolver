@@ -2,20 +2,16 @@ import java.util.List;
 import java.util.Objects;
 import java.util.UUID;
 
-public class Node {
-    public UUID id = UUID.randomUUID();
-
-
-
-    public Point point;
-    boolean visited;
+class Node {
+    UUID id = UUID.randomUUID();
+    Point point;
     List<Node> possibleConnections;
 
-    public Node(int positionX, int positionY) {
+    Node(int positionX, int positionY) {
         this.point = new Point(positionX,positionY);
     }
 
-    public boolean isNextTo(Node node) {
+    boolean isNextTo(Node node) {
         var xDistance = Math.abs(this.point.x - node.point.x);
         var yDistance = Math.abs(this.point.y - node.point.y);
         if((xDistance == 1 ^ yDistance == 1) && (xDistance <= 1 && yDistance<= 1)) {
@@ -24,7 +20,7 @@ public class Node {
         return false;
     }
 
-    public void updateConnections(List<Node> possibleConnections) {
+    void updateConnections(List<Node> possibleConnections) {
         assert possibleConnections.stream().allMatch(this::isNextTo) : "Passed nodes are next to given node";
         this.possibleConnections = possibleConnections;
     }

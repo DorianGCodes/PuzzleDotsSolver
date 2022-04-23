@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class BoardNodeFactory {
+class BoardNodeFactory {
 
     static List<Node> generateNodesForBoard(int numberOfDotsOnSide) {
         List<Node> nodes = new ArrayList<>(numberOfDotsOnSide * numberOfDotsOnSide);

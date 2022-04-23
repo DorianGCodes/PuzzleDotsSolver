@@ -1,15 +1,15 @@
 import java.util.Objects;
 
-public class Point {
-    int x;
-    int y;
+class Point {
+    double x;
+    double y;
 
-    public Point(int x, int y) {
+    Point(double x, double y) {
         this.x = x;
         this.y = y;
     }
 
-    public static Point of(int x, int y) {
+    static Point of(int x, int y) {
         return new Point(x,y);
     }
 

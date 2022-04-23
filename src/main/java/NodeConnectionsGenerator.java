@@ -1,7 +1,7 @@
 import java.util.Map;
 import java.util.stream.Collectors;
 
-public class NodeConnectionsGenerator {
+class NodeConnectionsGenerator {
 
     static void generateNodesConnections(Map<Point, Node> nodes) {
         nodes.forEach((point,node) -> {

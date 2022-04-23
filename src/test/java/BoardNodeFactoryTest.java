@@ -1,3 +1,4 @@
+import org.assertj.core.api.Assertions;
 import org.assertj.core.api.BDDAssertions;
 import org.junit.jupiter.api.Test;
 
@@ -24,16 +25,9 @@ public class BoardNodeFactoryTest {
     }
 
     @Test
-    void traverseThroughNodes() {
-        var numberOfNodesOnEachSide = 3;
-        Map<Point, Node> nodes = BoardNodeFactory.generateNodesForBoard(numberOfNodesOnEachSide)
-                .stream()
-                .collect(Collectors.toMap(e -> e.point, e -> e));
-        var board = new Board();
-        board.nodes = nodes;
-        board.length = numberOfNodesOnEachSide;
-        NodeConnectionsGenerator.generateNodesConnections(nodes);
-
-        GenerateSolutions.recursiveSolution(board);
+    void solveGame() {
+        Board board = GameInitializer.initGame();
+        List<Solution> solution = GenerateSolutions.solution(board, board.nodes.get(Point.of(0, 5)));
+        Assertions.assertThat(solution.get(0).solutionSteps.size()).isEqualTo(37);
     }
 }
