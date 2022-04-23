@@ -18,13 +18,11 @@ class GenerateSolutions {
                 tasks.stream().map(CompletableFuture::join)
                         .flatMap(Collection::stream)
                         .collect(Collectors.toList());
-        System.out.println("collect tasks");
         return SolutionDuplicatorRemover.getSolutionWithoutDuplicates(collect);
     }
 
     static List<Solution> solution(Board board, Node firstNode) {
         List<List<Node>> solutions = new ArrayList<>();
-        System.out.println(Thread.currentThread().getName() + " " + firstNode);
         Stack<GameState> gameStateStack = new Stack<>();
         gameStateStack.push(GameState.initialGameState(firstNode, board.wallIndicators));
         while (!gameStateStack.isEmpty()) {
